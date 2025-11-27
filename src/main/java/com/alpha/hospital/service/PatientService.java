@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.alpha.hospital.ResponseStructure;
-import com.alpha.hospital.Exception.PatientNotFoundException;
 import com.alpha.hospital.Repository.PatientRepo;
 import com.alpha.hospital.entity.Patient;
+import com.alpha.hospital.exception.PatientNotFoundException;
 
 @Service
 public class PatientService {
