@@ -1,7 +1,11 @@
 package com.alpha.hospital.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
+import org.springframework.stereotype.Service;
+=======
 import org.springframework.http.HttpStatus;
+>>>>>>> 3f5bc7dd28603ccb9fff7af12d887933f38dcfcc
 
 import com.alpha.hospital.Repository.DoctorRepo;
 import com.alpha.hospital.Repository.PatientRepo;
@@ -11,12 +15,18 @@ import com.alpha.school.entity.College;
 import com.alpha.school.entity.Student;
 import com.alpha.school.exception.StudentNotFoundException;
 
+@Service
 public class PatientService {
 	@Autowired
 	private DoctorRepo dr;
 	
 	@Autowired
 	private PatientRepo pr;
+
+	public void savePatient(Patient p) {
+		pr.save(p);
+
+	}
 
 	public void saveStu(Patient p) {
 		

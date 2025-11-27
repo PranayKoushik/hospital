@@ -9,3 +9,5 @@ import com.alpha.hospital.entity.Doctor;
 public interface DoctorRepo extends JpaRepository<Doctor, Integer>  {
 
 }
+
+

@@ -1,7 +1,12 @@
 package com.alpha.hospital.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Patient {
 	
+	@Id
      private int id;
      private String name;
      private String disease;
@@ -38,7 +43,9 @@ public class Patient {
 		super();
 		// TODO Auto-generated constructor stub
 	 }
-     
 	 
-     
-}
+		public void save(Patient p ) {
+			// TODO Auto-generated method stub
+			
+		}
+	}
