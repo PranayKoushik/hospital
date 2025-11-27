@@ -9,13 +9,13 @@ import com.alpha.hospital.entity.Patient;
 import com.alpha.hospital.service.PatientService;
 
 @RestController
-public class HospitalController {
+public class PatientController {
 
 	@Autowired
 	private PatientService ps;
 	
 	@PostMapping("/savePatient")
-	public void savePatient(@RequestBody Patient p) {
-		ps.saveStu(p);
+	public void patientsave(@RequestBody Patient p) {
+		ps.savePatient(p);
 	}
 }
