@@ -1,21 +1,41 @@
 package com.alpha.hospital.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.alpha.hospital.ResponseStructure;
+
 
 import com.alpha.hospital.entity.Patient;
 import com.alpha.hospital.service.PatientService;
 
 @RestController
 public class PatientController {
-
 	@Autowired
 	private PatientService ps;
 	
-	@PostMapping("/savePatient")
+	@PostMapping("/savepatient")
 	public void patientsave(@RequestBody Patient p) {
-		ps.savePatient(p);
+		ps.savepatient(p);
+	}
+	
+	
+	@PutMapping("/updatepatient")
+	public void update(@RequestParam int id, @RequestParam String newname) {
+		ps.update(id, newname);
+	}
+	@DeleteMapping("/deletePatient")
+	public void deletePatient(@RequestParam int id) {
+		ps.deletePatient(id);
+}
+	@GetMapping("/findPatient")
+	public ResponseStructure<Patient> findPatient(@RequestParam int id) {
+		return ps.findPatient(id);
 	}
 }
