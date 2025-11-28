@@ -12,6 +12,11 @@ public class Patient {
 	private String name;
 	@Length(min=5,max=20)
 	private String disease;
+	
+	private int age;
+	private String bloodgroup;
+	private int sugar;
+	private int Bloodpressure;
 	public Patient() {
 		super();
 		// TODO Auto-generated constructor stub
