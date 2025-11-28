@@ -10,11 +10,11 @@ import com.alpha.hospital.entity.Doctor;
 public class DoctorServices {
 	@Autowired
 	private DoctorRepo dr;
+	
 	public void savedoctor(Doctor d) {
 		dr.save(d);
 	
 }
-	
 	public void update(int id ,String newname) {
 		Doctor d=dr.findById(id).get();
 		d.setName(newname);
