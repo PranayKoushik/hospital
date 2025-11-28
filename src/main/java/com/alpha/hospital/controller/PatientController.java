@@ -15,13 +15,15 @@ import com.alpha.hospital.ResponseStructure;
 import com.alpha.hospital.entity.Patient;
 import com.alpha.hospital.service.PatientService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class PatientController {
 	@Autowired
 	private PatientService ps;
 	
 	@PostMapping("/savepatient")
-	public void patientsave(@RequestBody Patient p) {
+	public void patientsave(@Valid @RequestBody Patient p) {
 		ps.savepatient(p);
 	}
 	

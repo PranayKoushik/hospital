@@ -14,7 +14,7 @@ public class PatientService {
 	@Autowired
 	private PatientRepo pr;
 	public void savepatient(Patient p) {
-		pr.save(p);
+		Patient savepatient=pr.save(p);
 	}
 	
 	public void update(int id ,String newname) {
