@@ -30,7 +30,7 @@ public class PatientService {
 	ResponseStructure<Patient> rs =new ResponseStructure<Patient>();
 		
 			rs.setStatuscode(HttpStatus.FOUND.value());
-			rs.setMessage("Student with id " +id + " FOUND");
+			rs.setMessage("Patient with id " +id + " FOUND");
 			rs.setData(p);
 
 	    return rs;
